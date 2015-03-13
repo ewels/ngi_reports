@@ -179,6 +179,10 @@ dm3: Drosophila
 <p>Obviously, if you're working at the Uppsala NGI node, change the <code>ngi_node</code> to
 <code>uppsala</code> instead of <code>stockholm</code>. The <code>organism_names</code> section should have
 reference id key - text pairs. This is used to make the report more verbose.</p>
+<p><strong>Note:</strong> In production, <code>ngi_reports</code> is run as the <code>funk</code> user by both
+Stockholm and Uppsala nodes. Here, the config file should <em>not</em> contain the
+<code>ngi_node</code> option. The code will try to guess the node from Piper XML files
+or can be specified with the <code>--ngi_node</code> command line parameter.</p>
 <h2 id="bash-commands">Bash Commands</h2>
 <p>To use <code>ngi_reports</code> from the command line easily, there are some bash commands
 that you need. These are written into a bash script to make life easy - you need to add
